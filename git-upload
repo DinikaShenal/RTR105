@@ -1,0 +1,6 @@
+#!/bin/bash
+git add .
+git config --global user.name DinikaShenal
+git config --global user.email dinikashenal@yahoo.com
+git commit -m "Class_04"
+git push origin main
