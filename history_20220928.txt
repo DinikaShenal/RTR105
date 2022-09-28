@@ -1,0 +1,47 @@
+    1  VirtualBox --startvm XP
+    2  quartus
+    3  ls -lt
+    4  git clone https://github.com/DinikaShenal/RTR105
+    5  ls -lt
+    6  cd RTR105/
+    7  ls 
+    8  mkdir Class_06
+    9  ls\
+   10  ls
+   11  cd Class_06/
+   12  nano first.c
+   13  gcc first.c -o first.out
+   14  ls -lt
+   15  cat first.c
+   16  gcc -save-temps first.c -o first.out
+   17  ls -lt
+   18  cat first.i
+   19  cat first.s
+   20  cat first.o
+   21  ls -lt
+   22  nano first.c
+   23  gcc first.c -o first.out
+   24  ./first.out 
+   25  nano first.c
+   26  gcc first.c -o first.out
+   27  ./first.out 
+   28  echo $?
+   29  nano first.c
+   30  gcc first.c -o first.out
+   31  ./first.out 
+   32  echo $?
+   33  ls -lt
+   34  nano first.c
+   35  echo $?
+   36  nano first.c
+   37  gcc first.c -o first.out
+   38  echo $?
+   39  ./first.out 
+   40  echo $?
+   41  pwd
+   42  cd ..
+   43  pwd
+   44  nano .gitignore
+   45  ls -lt
+   46  ls -lta
+   47  history > history_20220928.txt 
