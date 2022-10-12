@@ -1,0 +1,157 @@
+    1  pwd
+    2  ls -lt
+    3  mkdir RTR105
+    4  ls -lt
+    5  cd RTR105/
+    6  pwd
+    7  echo hello
+    8  echo hello world
+    9  echo hello world!
+   10  cd ..
+   11  rm -rf RTR105/
+   12  ls -lt
+   13  mkdir Test
+   14  cd Te
+   15  ls
+   16  cd Test/
+   17  clear
+   18  nano test.c
+   19  gcc test.c -o test.out
+   20  sudo apt install gcc
+   21  gcc test.c -o test.out
+   22  nano test.c
+   23  gcc test.c -o test.out
+   24  ./test
+   25  ./test.out
+   26  nano test.c
+   27  gcc test.c -o test.out
+   28  nano test.c
+   29  gcc test.c -o test.out
+   30  nano test.c
+   31  gcc test.c -o test.out
+   32  nano test.c
+   33  gcc test.c -o test.out
+   34  ./test.out
+   35  claer
+   36  clear
+   37  nano test.c
+   38  cat test.c
+   39  gcc test.c -o test.out
+   40  ls -l test.out
+   41  ./test.out
+   42  cd ..
+   43  ls -lt
+   44  clear
+   45  firefox
+   46  git clone https://github.com/DinikaShenal/RTR105
+   47  sudo apt install git
+   48  git clone https://github.com/DinikaShenal/RTR105
+   49  ls -lt
+   50  cd RTR105
+   51  ls -lt
+   52  cd ..
+   53  mkdir test
+   54  cd test
+   55  gedit dec2bin.c
+   56  gcc dec2bin.c -o dec2bin
+   57  ./dec2bin 
+   58  gedit dec2bin.c
+   59  gcc dec2bin.c -o dec2bin
+   60  gedit dec2bin.c
+   61  gcc dec2bin.c -o dec2bin
+   62  ./dec2bin 
+   63  cd
+   64  cd test
+   65  gcc dec2bin.c -o dec2bin
+   66  ./dec2bin 
+   67  gedit dec2bin.c
+   68  gcc dec2bin.c -o dec2bin
+   69  ./dec2bin 
+   70  gedit dec2bin.c
+   71  gcc dec2bin.c -o dec2bin
+   72  ./dec2bin 
+   73  gedit dec2bin.c
+   74  gcc dec2bin.c -o dec2bin
+   75  gedit dec2bin.c
+   76  gcc dec2bin.c -o dec2bin
+   77  ./dec2bin 
+   78  gedit dec2bin.c
+   79  gcc dec2bin.c -o dec2bin
+   80  ./dec2bin 
+   81  gedit dec2bin.c
+   82  gcc dec2bin.c -o dec2bin
+   83  gedit dec2bin.c
+   84  gcc dec2bin.c -o dec2bin
+   85  ./dec2bin 
+   86  gedit dec2bin.c
+   87  firefox
+   88  pwd
+   89  ls -lt
+   90  cd RTR105/
+   91  ls -lt
+   92  cd ..
+   93  rm -rf RTR105
+   94  cd Test
+   95  cd test
+   96  ls -lt
+   97  clear
+   98  gedit dec2bin.c
+   99  gcc dec2bin.c -o dec2bin
+  100  ./dec2bin
+  101  gedit dec2bin.c
+  102  gcc dec2bin.c -o dec2bin
+  103  ./dec2bin
+  104  gedit dec2bin.c
+  105  gcc dec2bin.c -o dec2bin
+  106  ./dec2bin
+  107  gedit dec2bin.c
+  108  gcc dec2bin.c -o dec2bin
+  109  ./dec2bin
+  110  gedit dec2bin.c
+  111  gcc dec2bin.c -o dec2bin
+  112  ./dec2bin
+  113  gedit dec2bin.c
+  114  gcc dec2bin.c -o dec2bin
+  115  ./dec2bin
+  116  gedit dec2bin.c
+  117  gcc dec2bin.c -o dec2bin
+  118  gedit dec2bin.c
+  119  gcc dec2bin.c -o dec2bin
+  120  gedit dec2bin.c
+  121  gcc dec2bin.c -o dec2bin
+  122  gedit dec2bin.c
+  123  gcc dec2bin.c -o dec2bin
+  124  gedit dec2bin.c
+  125  gcc dec2bin.c -o dec2bin
+  126  cat dec2bin.c
+  127  gedit dec2bin.c
+  128  gcc dec2bin.c -o dec2bin
+  129  ./dec2bin
+  130  cat dec2bin.c
+  131  gedit dec2bin.c
+  132  gcc dec2bin.c -o dec2bin
+  133  cd ..
+  134  clear
+  135  cd test/
+  136  gedit dec2bin.c
+  137  gcc dec2bin.c -o dec2bin.out
+  138  ./dec2bin.out
+  139  gedit dec2bin.c
+  140  gcc dec2bin.c -o dec2bin.out
+  141  ./dec2bin.out
+  142  gedit dec2bin.c
+  143  git clone https://github.com/DinikaShenal/RTR105
+  144  cd RTR105/
+  145  mkdir Class_09
+  146  cd Class_0
+  147  cd Class_09
+  148  gedit char_data_type_tests.c
+  149  gcc char_data_type_tests.c -o char_data_type_tests.out
+  150  ./char_data_type_tests.out 
+  151  gedit char_data_type_tests.c
+  152  ls
+  153  cd ..
+  154  ls
+  155  git-upload 09
+  156  ./git-upload 09
+  157  history >> history_20221012.txt
