@@ -72,13 +72,13 @@ int Bitshift(int num)
     printf("Enter the number of bits to shift: ");
     scanf("%d", &num_bitshift);
     printf("\n");
-    if(type_bitshift='L')//performs the left bitshift
+    if(type_bitshift=='L')//performs the left bitshift
     {
         dec_num = num;
         dec_num = dec_num<<num_bitshift; //num_bitshift;
     }
 
-    else if(type_bitshift='R')//performs the right bitshift
+    else if(type_bitshift=='R')//performs the right bitshift
     {
         dec_num = num;
         dec_num = dec_num>>num_bitshift; //num_bitshift;
