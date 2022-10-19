@@ -21,19 +21,52 @@
 //               ir = i1 + i2; // after this operation ir will be equal to 11
 //               ir = ir + 10; // after this operation ir will be equal to 21
 //               ir += 10; // this is the same as ir = ir + 10; just written shortly
-//               ir++; // ir = ir + 1; vai ir += 1;
+//               ir++; // can be written as ir = ir + 1; or ir += 1;
 //               ++ir; // difference in comparison to previous
 //                     // increment and then use or
 //                     // use and then increment
+
 // relational: <, <=, >=, >, ==, !=
+
 // logical: &&, ||, ! (1 operand)
+// compare with && and || for JavaScript ;-)
+// https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Logical_AND
+// https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Logical_OR
+
+// bitwise operations - https://en.wikipedia.org/wiki/Bitwise_operation
 // logical by bits: &, |, ^, ~ (1 operand)
-// bit operations: >>, << (then we shift bit sequence it's not shifted in loop)
+// shifts: >>, << (then we shift bit sequence it's not shifted in loop
+//                 to shift in loop you need to write special algorithm)
+
+// For Agil and Dinika (don't use computer)
+// 7 & 0x79 -> 7 (is int in dec) & 0x79 (is int in hex)
+//                           7: 0000 0000  0000 0000  0000 0000  0000 0111
+//                        0x79: 0000 0000  0000 0000  0000 0000  0111 1001
+//          result of 7 & 0x79: 0000 0000  0000 0000  0000 0000  0000 0001 -> 1 dec
+
+// 24 << 16 -> 24 (is int in dec) << 16 (is int in dec)
+//                          24: 0000 0000  0000 0000  0000 0000  0001 1000
+//         result for 24 << 16: 0000 0000  0001 1000  0000 0000  0000 0000 -> 1*2^19 + 1*2^20 = 1572864
+// (char)24 << 16 -> 24 (is char in dec) << 16 (is int in dec)
+//                    (char)24:                                  0001 1000
+//   result for (char)24 << 16: 0000 0000  0001 1000  0000 0000  0000 0000 -> 1*2^19 + 1*2^20 = 1572864
+
+// (char)(24 << 16) -> result is (forced) char
+//                          24: 0000 0000  0000 0000  0000 0000  0001 1000
+//         result for 24 << 16: 0000 0000  0001 1000  0000 0000  0000 0000 -> 1*2^19 + 1*2^20 = 1572864
+// result for (char)(24 << 16):                                  0000 0000 -> 0
+
+// ~405 ->
 
 #include<stdio.h>
 
 int main()
  {
+ printf("7 & 0x79 = %d\n",7&0x79);
+ printf("\n24 (%ld bytes) << 16 (%ld bytes) = %d (%ld bytes)\n",sizeof(24),sizeof(16),24<<16,sizeof(24<<16));
+ printf("\n(char)24 (%ld bytes) << 16 (%ld bytes) = %d (%ld bytes)\n",sizeof((char)24),sizeof(16),(char)24<<16,sizeof((char)24<<16));
+ printf("\n(char)(24 (%ld bytes) << 16 (%ld bytes)) = %d (%ld bytes)\n",sizeof((char)24),sizeof(16),(char)(24<<16),sizeof((char)(24<<16)));
+
  char c1 = 'A', c2 = 0x45;
  int i1 = 2000, i2 = 01056;
  float f1 = 2.3, f2 = -770.896;
@@ -42,8 +75,9 @@ int main()
  printf("\n%d (%ld bytes) * %d (%ld bytes)",c1,sizeof(c1),i1,sizeof(i1));
  printf(" = %d (%ld bytes)\n\n",c1*i1,sizeof(c1*i1));
 
- // suggestions for investigation:
- //https://github.com/tatusmatrix/RTR105_2022_V01/blob/main/Class_10/operations_tests.c
+ // suggestions for investigation steps:
+ // https://github.com/tatusmatrix/RTR105_2022_foreign/blob/main/Class_10/operations_tests.c
+ // https://github.com/tatusmatrix/RTR105_2022_V01/blob/main/Class_10/operations_tests.c
 
  // % - is "prohibited" for real numbers (float, double)
  // (in C language ... in some other programming languages it is possible)
