@@ -1,0 +1,52 @@
+    1  VirtualBox --startvm XP
+    2  quartus
+    3  ls
+    4  git clone https://github.com/DinikaShenal/RTR105
+    5  cd RTR105/
+    6  mkdir Class_12
+    7  cd Class_12
+    8  gedit loops_test.c
+    9  ls -lt
+   10  mv loops_test.c loop_while_test.c 
+   11  ls -lt
+   12  mv loop_while_test.c loop_for_test.c 
+   13  ls
+   14  mv loop_for_test.c loop_while_test.c 
+   15  ls
+   16  gedit loop_while_test.c 
+   17  cp loop_while_test.c loop_for_test.c 
+   18  ls
+   19  gedit loop_for_test.c 
+   20  cp loop_while_test.c loop_do_while_test.c 
+   21  gedit loop_do_while_test.c 
+   22  gedit count_with_loops.c
+   23  gcc count_with_loops.c -o count_with_loops.out
+   24  gedit count_with_loops.c
+   25  gcc count_with_loops.c -o count_with_loops.out
+   26  ./count_with_loops.out 
+   27  gedit count_with_loops.c
+   28  gcc count_with_loops.c -o count_with_loops.out
+   29  ./count_with_loops.out 
+   30  gedit count_with_loops.c
+   31  gcc count_with_loops.c -o count_with_loops.out
+   32  ./count_with_loops.out 
+   33  gedit count_with_loops.c
+   34  gcc count_with_loops.c -o count_with_loops.out
+   35  ./count_with_loops.out 
+   36  gedit count_with_loops.c
+   37  gcc count_with_loops.c -o count_with_loops.out
+   38  ./count_with_loops.out 
+   39  gedit count_with_loops.c
+   40  gcc count_with_loops.c -o count_with_loops.out
+   41  ./count_with_loops.out 
+   42  gedit count_with_loops.c
+   43  gcc count_with_loops.c -o count_with_loops.out
+   44  ./count_with_loops.out 
+   45  ls
+   46  cd ..
+   47  ./git-upload 12
+   48  ls
+   49  cd ..
+   50  cd RTR105/
+   51  ls
+   52  history>history_20221025.txt
