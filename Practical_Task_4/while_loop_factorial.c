@@ -5,7 +5,6 @@
 // 12! for int
 
 int main() {
-    // Write C code here
     
     char type;
     int i,n;
