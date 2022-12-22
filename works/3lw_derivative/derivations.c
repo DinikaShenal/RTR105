@@ -6,10 +6,12 @@
 
 int main()
 {
+  FILE *fptr;
   float a=-0.9 ,b=0.9;
   float delta_x=5.e-3;
   int N = (b-a)/delta_x + 1;
-
+  
+  
   float * x;
   x = (float*) malloc((N)*sizeof(float));
   if (x ==NULL) exit(1);
@@ -34,7 +36,9 @@ int main()
   f_ddf_x2 = (float*) malloc((N)*sizeof(float));
   if (f_ddf_x2 ==NULL) exit(1);
 
-  printf("size of x array in elements - %d\n", N);
+  //printf("size of x array in elements - %d\n", N);  important
+  
+  
   //printf("size of x array - %d\n",x); 
 
   int i=0;
@@ -75,6 +79,7 @@ int main()
   }
 
   //printing part of the whole thing
+
   
   printf("|\tx\t|\tf(x)\t|f'(x)_a\t|f'(x)_d\t|f''(x)_a\t|f''(x)_d\t|\n");
   printf("-------------------------------------------------------------------------------------------------\n");
@@ -93,10 +98,42 @@ int main()
     {
       printf("|%10.3f\t|%10.3f\t|%10.3f\t|%10.3f\t|%10.3f\t|%10.3f\t|\n",x[i],f_x[i],f_df_x[i],f_df_x2[i],f_ddf_x[i],f_ddf_x2[i]);
     }
-    //printf("|%6.3f\t|%6.3f\t|%6.3f\t|%6.3f\t|%6.3f\t|%6.3f\t|\n",x[i],f_x[i],f_df_x[i],f_df_x2[i],f_ddf_x[i],f_ddf_x2[i]);
+    
     i++;
   }
   printf("-------------------------------------------------------------------------------------------------\n");
-
+  
+  
+  //printf("\tx\t\tf(x)\t    f'(x)_a\t   f'(x)_d\t  f''(x)_a\t  f''(x)_d\n");
+  
+  
+  fptr = fopen("derivatives.txt","w");
+  if (fptr == NULL)
+    {
+    printf("Cannot open file \n");
+    exit(0);
+    }
+  
+  i=0;
+  while (i<N)
+  {
+    if (i==N-1)
+    {
+      fprintf(fptr,"%10.3f\t%10.3f\t%10.3f\t\t\t%10.3f\t\t\t\n",x[i],f_x[i],f_df_x[i],f_ddf_x[i]);
+    }
+    if (i==N-2)
+    {
+      fprintf(fptr,"%10.3f\t%10.3f\t%10.3f\t%10.3f\t%10.3f\t\t\t\n",x[i],f_x[i],f_df_x[i],f_df_x2[i],f_ddf_x[i]);
+    }
+    else if(i<N-2)
+    {
+      fprintf(fptr,"%10.3f\t%10.3f\t%10.3f\t%10.3f\t%10.3f\t%10.3f\t\n",x[i],f_x[i],f_df_x[i],f_df_x2[i],f_ddf_x[i],f_ddf_x2[i]);
+    }
+    
+    i++;
+  }
+  fclose(fptr);
+  
+  return 0;
 
 }
