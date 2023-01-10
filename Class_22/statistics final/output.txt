@@ -1,0 +1,5 @@
+'a' appeared 1 times
+'d' appeared 1 times
+'i' appeared 2 times
+'k' appeared 1 times
+'n' appeared 1 times

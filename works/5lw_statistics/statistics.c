@@ -1,32 +1,25 @@
 #include <stdio.h>
 #include <string.h>
+#include <stdbool.h>
 #define max_sym_length 100
 
 void min_symbol(char sym_array[], int sym_length);
 void max_symbol(char sym_array[], int sym_length);
+bool char_is_in_sentence(char min_symbol, char sym_array[], int sym_length);
 void average_symbol(char sym_array[], int sym_length);
 void ascending_sort(char sym_array[], int sym_length);
 void median_symbol(char sym_array[], int sym_length);
 void mode_symbol(char sym_array[], int sym_length);
+void print_occurences(char *s);
 
 int main()
 {
-    //int sym_length; //number of elements in array
     char sym_array[max_sym_length]; //declaration of array
-    int i,sym_length;
-    //sample
+    int i,sym_length; //number of elements in array
     char temp_array[max_sym_length];
     int j;
 
-    //printf("\nEnter the number of symbols that you want to enter: ");
-    //scanf("%d",&sym_length);
-
     printf("\nEnter the sentence: \n");
-    //for (i = 0; i < sym_length; i++)
-    //{
-    //    scanf(" %c", &sym_array[i]);  // Use %c to read a character
-    //}
-
     fgets(temp_array,max_sym_length-1,stdin);
     sym_length=strlen(temp_array);
 
@@ -45,74 +38,42 @@ int main()
     printf("The array is: %s\n", sym_array);
 
     sym_length=strlen(sym_array);
+
     min_symbol(sym_array,sym_length);
 
     max_symbol(sym_array,sym_length);
 
     average_symbol(sym_array,sym_length);
 
-    ascending_sort(sym_array,sym_length); //new
+    ascending_sort(sym_array,sym_length);
 
     median_symbol(sym_array,sym_length);
 
     mode_symbol(sym_array,sym_length);
 
     printf("\nThe new sorted symbol array is: %s", sym_array);
-    /*for (i = 0; i < sym_length; i++)
-    {
-        printf("%c ", sym_array[i]);  // Use %c to print a character
-    }*/
     printf("\n\n");
+
+    print_occurences(sym_array);
     return 0;
 
 }
 
 void min_symbol(char sym_array[], int sym_length)
 {
-    /*
-    int i,min_value=127; // Initialize the minimum value to the maximum ASCII value
-    char min_symbol;// = &sym_array[0];  // Declare a character variable to store the minimum symbol
-    
-    for (i = 0; i < sym_length; i++)
-    {
-        if(sym_array[i] != ' ')
-        {
-            if (sym_array[i] < min_value)  // If the current symbol has a smaller ASCII value
-            {
-                min_value = sym_array[i];  // Update the minimum value
-                min_symbol = sym_array[i];  // Update the minimum symbol
-            }
-        }
-    }
-
-    */
-    int min_value =127;
-    char min_symbol;
+    int min_value =127; // Initialize the minimum value to the maximum ASCII value
+    char min_symbol;  // Declare a character variable to store the minimum symbol
     for (int i=0; i<sym_length-1;i++)
     {
         
-        if (sym_array[i] != 0 && sym_array[i]<min_value)
+        if (sym_array[i] != 0 && sym_array[i]<min_value) // If the current symbol has a smaller ASCII value
         {   
-            min_value=sym_array[i];
-            min_symbol=sym_array[i];
+            min_value=sym_array[i]; // Update the minimum value
+            min_symbol=sym_array[i]; // Update the minimum symbol
         }
         
     }    
     printf("\nThe symbol with the minimum ASCII value is: %c\n", min_symbol);
-    
-    /*
-    for(i=1; i<sym_length;i++)
-    {
-        if(sym_array[i] != ' ')
-        {
-            if(sym_array[i] < *min_symbol)
-            {
-                min_symbol = &sym_array[i];
-            }
-        }    
-    }
-    printf("\nThe symbol with the minimum ASCII value is: %d\n", *min_symbol);
-    */
 
 }
 
@@ -133,22 +94,47 @@ void max_symbol(char sym_array[], int sym_length)
     printf("\nThe symbol with the maximum ASCII value is: %c\n", max_symbol);
 }
 
+bool char_is_in_sentence(char min_symbol, char sym_array[], int sym_length) //checking if the symbol is in sentence
+{
+    for (int i=0; i<sym_length; i++)
+    {
+        if(sym_array[i] == min_symbol)
+        {
+           return true;
+        }
+    }
+    return false;
+}
+
 void average_symbol(char sym_array[], int sym_length)
 {
-    int i, total=0;
+    int i,check, total=0;
     float average;
     char average_symbol; // Declare a character variable to store the average symbol
 
-    for (i = 0; i < sym_length; i++)
+
+    for (i = 0; i < sym_length-1; i++)
     {
         total += sym_array[i]; // Adding the ASCII value of the symbol to the total
     }
 
-    average = (float)total / sym_length; // Calulating the average ASCII value of the array
+    average = (float) (total / (sym_length-1)); // Calulating the average ASCII value of the array
     average_symbol = (char)average; // Converting the average value to a symbol
 
-    printf("\nThe symbol with the average ASCII value is: %c\n",average_symbol);
+    //printf("\nThe symbol with the average ASCII value is: %c\n",average_symbol); //temp
 
+    check = char_is_in_sentence(average_symbol, sym_array, sym_length);
+    if (check == true)
+    {
+        printf("\nThe symbol with the average ASCII value is: %c\n",average_symbol);
+    }
+    else
+    {
+        printf("\nThe symbol/character is not in the sentence, but the character is shown below.\n");
+        printf("The symbol not in the sentence with the average ASCII value is: %d\n",average_symbol);
+        printf("The symbol not in the sentence with the average ASCII value is: %c\n",average_symbol);
+    }
+    
 }
 
 void ascending_sort(char sym_array[], int sym_length)
@@ -182,7 +168,7 @@ void median_symbol(char sym_array[], int sym_length)
 
     if (sym_length % 2 == 0) //checking if the number of symbols in the array is even
     {
-        median = (sym_array[sym_length / 2] + sym_array[sym_length / 2 - 1]) / 2.0; //Calculating the median value
+        median = (sym_array[sym_length / 2] + sym_array[(sym_length / 2) - 1]) / 2.0; //Calculating the median value
         for(i = 0; i < sym_length;i++)
         {
             if (median<=sym_array[i])
@@ -196,10 +182,12 @@ void median_symbol(char sym_array[], int sym_length)
 
     else //Executes the below section if the number of the symbols in the array is odd
     {
-        median = sym_array[sym_length / 2]; //Calculating the median value
+        median = sym_array[sym_length / 2 + 1]; //Calculating the median value
         median_symbol = (char)median; //Converting the median value to a symbol
     }
+
     printf("\nThe symbol with the median ASCII value is: %c\n",median_symbol);
+
 }
 
 void mode_symbol(char sym_array[], int sym_length)
@@ -226,4 +214,47 @@ void mode_symbol(char sym_array[], int sym_length)
     }
 
     printf("\nThe symbol with the mode ASCII value is: %c\n",mode_symbol);
+}
+
+void print_occurences(char *s)
+{
+    int length = strlen(s);
+    char unique[length];
+    int counted = 0;
+
+    // Open the output file
+    FILE *fp = fopen("statistics.txt", "w");
+    if (fp == NULL) {
+        printf("Error opening file!\n");
+    }    
+
+    for (int i=0; i<length; i++)
+    {
+        bool already_counted = false;
+        if (s[i] != '\n'){
+        for (int j = 0; j < counted; j++)
+        {
+            if (s[i] == unique[j])
+            {
+                already_counted = true;
+            }
+        }
+        if (already_counted) continue;
+
+        int count = 0;
+        for (int j = 0; j < length; j++)
+        {
+            if (s[i] == s[j]) count++;
+        }
+        fprintf(fp,"%c  %d\n",s[i],count);
+
+        unique[counted] = s[i];
+        counted++;
+        }
+    }
+
+    // Close the output file
+    fclose(fp);
+    
+
 }
