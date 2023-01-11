@@ -6,15 +6,17 @@ Lab Work 1 : Series - Arcsine(x) function
 
 # The Contents of this folder
 
+-> "sample_screenshots" : This folder contains the screenshots of the sample output of the compiled code when the user input is "x=0.8"
+
 -> "README.md" : This readme file contains the report about this lab work
 
 -> "arcsin.c" : This C file contains the main function of the code 
 
--> "arcsine.txt" : This text file contains the Arcsine function and Recurrence Formulae
-
--> "arcsine.gp" : This .gp file contains the script for the gnuplot
+-> "arcsine.gp" : This .gp file contains the script for the gnuplot 
 
 -> "arcsine.png" : This .png contains the arcsine function and first three Taylor series equations
+
+-> "arcsine.txt" : This text file contains the Arcsine function and Recurrence Formulae 
 
 # Report on Lab Work 1
 
