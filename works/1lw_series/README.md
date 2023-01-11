@@ -6,6 +6,6 @@ Lab Work 1 : Series
 
 ## The Contents of this folder
 
-<- "README.md" : This readme file contains the report about this lab work
-
-<- "arcsin.c" : This C file contains the main function of the code 
+-> "README.md" : This readme file contains the report about this lab work
+-> "arcsin.c" : This C file contains the main function of the code 
+-> "arcsine.txt" : This text file contains the Arcsine function and Recurrence Formulae
