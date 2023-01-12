@@ -23,12 +23,18 @@ double arcsin_solv(double x)
 
 int main()
 {
-    float a=-0.7, b=0.3, x, delta_x=1.e-3/*0.001*/,funkc_a,funkc_b,funkc_x;
+    float a, b, x, delta_x=1.e-3/*0.001*/,funkc_a,funkc_b,funkc_x;
     int k=0;
+    
+    printf("\nEnter the first limit: ");
+    scanf("%f",&a);
+    printf("\nEnter the second limit: ");
+    scanf("%f",&b);
 
     funkc_a=arcsin_solv(a);
     funkc_b=arcsin_solv(b);
     
+    printf("\n");
 
     if(funkc_a*funkc_b>0)
     {
@@ -58,7 +64,7 @@ int main()
 
     }
 
-    printf("The root is located at x=%.3f, because asin(x) is %.3f\n",x,arcsin_solv(x));
+    printf("\nThe root is located at x=%.3f, because asin(x) is %.3f\n\n",x,arcsin_solv(x));
     return 0;
     
 
