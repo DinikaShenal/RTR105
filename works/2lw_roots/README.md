@@ -2,7 +2,7 @@ Author : Dinika Shenal Netolpitiya Mahanama Siriwardana
 
 ID : 221AEC010
 
-Lab Work 2 : Roots
+Lab Work 2 : Roots - Arcsine(x) function
 
 # The Contents of this Folder
 
