@@ -2,16 +2,24 @@
 #include <math.h>
 #include <stdlib.h>
 
-//#define N 100
 
 int main()
 {
   FILE *fptr;
-  float a=-0.9 ,b=0.9;
+  float a,b;
   float delta_x=5.e-3;
+  
+  printf("\nThe first limit should be greater than -1.0 but less than second limit.");
+  printf("\nThe second limit should be greater than first limit but less than 1.0.\n");
+
+  printf("\nEnter the first(a) limit: ");
+  scanf("%f",&a);
+  printf("\nEnter the second(b) limit: ");
+  scanf("%f",&b);
+  printf("\n");
+
+
   int N = (b-a)/delta_x + 1;
-  
-  
   float * x;
   x = (float*) malloc((N)*sizeof(float));
   if (x ==NULL) exit(1);
@@ -36,11 +44,6 @@ int main()
   f_ddf_x2 = (float*) malloc((N)*sizeof(float));
   if (f_ddf_x2 ==NULL) exit(1);
 
-  //printf("size of x array in elements - %d\n", N);  important
-  
-  
-  //printf("size of x array - %d\n",x); 
-
   int i=0;
   x[0]=a;
   f_x[0]=asin(x[0]);
@@ -48,7 +51,7 @@ int main()
   f_ddf_x[0] = (x[0]/pow(1-pow(x[0],2),(1.5)));
   i++;
 
-  //while(x[i]<b)
+  
   while(i<N)
   {
    x[i] = x[i-1] + delta_x;
@@ -102,9 +105,6 @@ int main()
     i++;
   }
   printf("-------------------------------------------------------------------------------------------------\n");
-  
-  
-  //printf("\tx\t\tf(x)\t    f'(x)_a\t   f'(x)_d\t  f''(x)_a\t  f''(x)_d\n");
   
   
   fptr = fopen("derivatives.txt","w");
