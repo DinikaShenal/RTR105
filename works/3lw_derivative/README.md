@@ -17,3 +17,22 @@ Lab Work 3 : Derivatives - Arcsine(x) function
 -> "derivatives.txt" : This text file contains the outputs from the "derivations.c"
 
 -> "derivatives.gp" : This ".gp" file contains the Gnuplot script
+
+# Report on Lab Work 3
+
+## Introduction
+
+This report discusses how this Lab Work vividly present the First Order and Second Order Differentiation of Arcsine(x) function for a region entered by the User. Additionally, this lab work showcases the difference present between Analytical and Finite Difference function of the First and Second Order for the same respective x value. Consequently, a sample graph is also plotted for the results from this Lab Work which has vividly discussed in the latter part of this report.
+
+## Operation of the Lab Work
+
+x : the value that is calculated through the Arcsine(x) function. \
+f(x) : the Arcsine(x) value for the respective x value. \
+f'(x)_a : the analytical formulae of first order deriivative value of f(x). \
+f'(x)_d : the finite difference formulae of first order derivative value of f(x). \
+f''(x)_a : the analytical formulae of second order deriivative value of f(x). \
+f''(x)_d : the finite difference formulae of second order derivative value of f(x). 
+
+The above Abbreviations are the titles of the columns in the results output of this lab work code. In the "derivations.c" file, the main code is vivid presented in a very easy to understand format. This code has been designed to get the first limit and second limit of the x from the user, in order to determine the region of x values for which to find the "f(x)" and "first order and second order equation values of this f(x)". \
+Furthermore, this code has been designed to print the outputs of the complile code in "derivations.c" file and also to orint them in the "derivatives.txt" file with only the numerical results present in the output results of the table printed. Also the current "derivatives.txt" file contains the results printed for a x region of "first limit = -0.9 and second limit = 0.9". And if the "derivations.c" file is compiled and run with some other user obtained values for "first limit and second limit" then this "derivatives.txt" file will be auto-updated with those respective results. Further to that, this "derivatives.txt" file is used to plot the gnuplot graph, which will be discussed in the latter part of this report. \
+
