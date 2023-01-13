@@ -12,11 +12,11 @@ Lab Work 3 : Derivatives - Arcsine(x) function
 
 -> "derivations.c" : This C file contains the main function of the code
 
+-> "derivatives.gp" : This ".gp" file contains the Gnuplot script
+
 -> "derivatives.png" : This is the image resulted from the gnuplot script for the results obtained from the "derivations.c" file.
 
 -> "derivatives.txt" : This text file contains the outputs from the "derivations.c"
-
--> "derivatives.gp" : This ".gp" file contains the Gnuplot script
 
 # Report on Lab Work 3
 
@@ -54,3 +54,12 @@ The screenshot below is a sample results output for the compiled "derivations.c"
 ![](sample_screenshots/first_half.png)
 
 ![](sample_screenshots/second_half.png)
+
+
+## Gnuplot Script and Output Image
+
+The Gnuplot script is present in the "derivatives.gp" file and this file is using the results printed in the "derivatives.txt" file. This script is plotting the results of "f(x), f'(x)_a, f'(x)_d, f''(x)_a and f''(x)_d" and in here the "f(x) = arcsine(x)". 
+
+Following image is output from the Gnuplot script where the "first limit = -0.9 and second limit = 0.9" :
+
+![](derivatives.png)
