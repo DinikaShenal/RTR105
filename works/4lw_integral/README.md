@@ -36,3 +36,20 @@ Firstly, in this Lab Work as mentionned above, there are three C file which cont
 Furthermore, one of the other interesting factors in this Lab Work is that it allows the user to enter the "first and second limits" to integrate the Arcsine(x) function. And these two limits are stored in the "integrations.txt" file, which are later used in the Gnuplot script when plotting the Area of Integration of the Arcsine(x) function. \
 Also, this "integrations.txt" file auto-updates with the recent C file out of the three C files that is compiled and run recently, for example: if "integrations_rectangle.c" is compiled and run for user input "first limit = -0.7 and second limit = 0.7" then the "integrations.txt" will store "-0.7" and "0.7", and if the "integrations_simpsons.c" is then compiled and run for user intput "first limit = -0.5 and second limit = 0.5" then the "integrations.txt" will store "-0.5" and "0.5". Consequently, this will result in the Gnuplot script to plot the graph for the recently performed C file.
 
+Moreover, the compiled and run versions of all the three C files do allow the user to enter the "fist and second limits", where the integration region is decided by the user, which can be witnessed in the following screenshots of the outputs. Further to that, the Each compiled and run version of the three C files do clearly present the result of the Integration of the Arcsine(x) function for the user-determined "first and second limtis".
+
+Following image is the screenshot of the compiled output of "integrations_rectangle.c" file, and the user inputs are "first limit = -0.5 and second limit = 0.7" :
+
+![](sample_screenshots/rectangle_rule.png)
+
+Following image is the screenshot of the compiled output of "integrations_simpsons.c" file, and the user inputs are "first limit = -0.5 and second limit = 0.7" :
+
+![](sample_screenshots/simpsons_rule.png)
+
+Following image is the screenshot of the compiled output of "integrations_trapezoidal.c" file, and the user inputs are "first limit = -0.5 and second limit = 0.7" :
+
+![](sample_screenshots/trapezoidal_rule.png)
+
+Lastly, it can be witnessed that all the three methods do give accurate results which are very similar to each other and also to the real mathematical integration of Arcsine(x) function from "-0.5 to 0.7" region.
+
+## Gnuplot Script and Output Image
