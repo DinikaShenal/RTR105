@@ -1,3 +1,5 @@
+//trapezoidal rule
+
 #include <stdio.h>
 #include <math.h>
 
