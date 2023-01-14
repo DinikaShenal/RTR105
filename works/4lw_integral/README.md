@@ -53,3 +53,9 @@ Following image is the screenshot of the compiled output of "integrations_trapez
 Lastly, it can be witnessed that all the three methods do give accurate results which are very similar to each other and also to the real mathematical integration of Arcsine(x) function from "-0.5 to 0.7" region.
 
 ## Gnuplot Script and Output Image
+
+The Gnuplot script is present in "integrations.gp" file. This script is plotting the Arcsine(x) curve and the Area of the region that is integrated according the user-determined "first and second limits". Furthermore, some help from a particular website was also utised to a certain minimal level in designing the Gnuplot script and it has been referrenced in the Gnuplot script itself. 
+
+The following image("integrations.png") is the output of a compiled code out of the three C files and where the user inputs were "first limit = -0.5 and second limit = 0.7": 
+
+![](integrations.png)
