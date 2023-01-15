@@ -4,8 +4,6 @@ set yrange [0:*]
 set title "Character Count Histogram"
 set xlabel "Character"
 set ylabel "Count"
-#set style data histogram
-#set style histogram rowstacked
 set style fill solid border -1
 
 #set the input file

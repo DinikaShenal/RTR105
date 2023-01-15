@@ -121,7 +121,6 @@ void average_symbol(char sym_array[], int sym_length)
     average = (float) (total / (sym_length-1)); // Calulating the average ASCII value of the array
     average_symbol = (char)average; // Converting the average value to a symbol
 
-    //printf("\nThe symbol with the average ASCII value is: %c\n",average_symbol); //temp
 
     check = char_is_in_sentence(average_symbol, sym_array, sym_length);
     if (check == true)
