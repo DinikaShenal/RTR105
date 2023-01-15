@@ -35,3 +35,18 @@ Firstly, the "statistics.c" is the file that contains the main function of this 
    5) The Mode Character present within the Sentence. 
    6) The Ascending Order sorting of the characters present within the User entered sentence. 
                        
+Therefore there are various coded functions in the "statistics.c" file to perform these above functions. Additionally, all these statistical functions are employed on the characters present in the sentence by taking their respective ASCII Code Decimal Number into consideration. Hence, all these statistical outputs are according the respective positions of the characters in the ASCII Table.
+
+The following image is a sample screenshot for the user entered sentence = "dinika shenal" :
+
+![](sample_screenshots/final_output.png)
+
+Consequently, in the above image we can witness all the required statistical functions are performed on the sample user entered sentence = "dinika shenal". Hence, the "statistics.c" also have another feature where it Counts the number of occurences of each character in this user entered sentence and then prints it on the "statistics.txt" file, which is then later used in the Gnuplot script of "statistics.gp", where the user has the ability to employ this data to plot the Histogram of the Number of Occurences of each Character in the User entered sentence.
+
+Furthermore, there are some unique case scenarios embedded in the design of this "statistics.c" file. Where the Average Character can be Present in the Sentence or Not. Henceforth, if the Average Character is Present in the Sentence, then the character present in the sentence is printed in the output as in the above image. However, if the Average Character is Not Present in the user entered sentence, then the code is designed to print an error message stating that the Average Character is Not Present in the Sentence and then will print the corresponding ASCII code Decimal value and the Character itself.\ 
+The following image is a screenshot where the Average Character is Not Present in the User entered sentence : 
+
+![](sample_screenshots/not_in_array.png)
+
+In addition, another unique scenario, is that before finding the Median Character Present within the Sentence, the Sentence array is ordered according to the Ascending Order eventhough the actual ordered sentence array is printed after the Median Character in the output. Also, this code is designed to find the Median Character present in the User entered sentence. \ 
+Further to that, the spaces present within the words are ignored, which is why initially in the output, the user entered sentence is present with spaces and without spaces in the ouput. Hence, the array with the spaces ignored is the one which is employed in performing all these statistical functions.
