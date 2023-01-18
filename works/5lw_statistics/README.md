@@ -48,7 +48,7 @@ The following image is a screenshot where the Average Character is Not Present i
 
 ![](sample_screenshots/not_in_array.png)
 
-In addition, another unique scenario, is that before finding the Median Character Present within the Sentence, the Sentence array is ordered according to the Ascending Order eventhough the actual ordered sentence array is printed after the Median Character in the output. Also, this code is designed to find the Median Character present in the User entered sentence.\
+In addition, another unique scenario, is that before finding the Median Character Present within the Sentence, the Sentence array is ordered according to the Ascending Order eventhough the actual ordered sentence array is printed after the Median Character in the output. Also, this code is designed to find the Median Character present in the User entered sentence. \
 Further to that, the spaces present within the words are ignored, which is why initially in the output, the user entered sentence is present with spaces and without spaces in the ouput. Hence, the array with the spaces ignored is the one which is employed in performing all these statistical functions.
 
 ## Gnuplot Script and Output Image
