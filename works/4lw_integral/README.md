@@ -27,7 +27,7 @@ Lab Work 4 : Integral - Arcsine(x) function
 
 ## Introduction
 
-This report discusses the Integration of the Arcsine(x) function through various coded versions, where the various integral methods such as Rectangle Rule, Simpsons Rule and Trapezoidal Rule have been embedded in the Lab Work. These different methods are included as seperate C file formats, which can be compiles and run in order to get the desired result for the Integration of Arcsine(x) function.
+This report discusses the Integration of the Arcsine(x) function through various coded versions, where the various integral methods such as Rectangle Rule, Simpsons Rule and Trapezoidal Rule have been embedded in the Lab Work. These different methods are included as seperate C file formats, which can be compiled and run in order to get the desired result for the Integration of Arcsine(x) function.
 
 ## Operation of the Lab Work
 
