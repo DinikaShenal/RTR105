@@ -32,7 +32,7 @@ Hence, the following screenshot image is a sample output of the compiled "bisect
 ![](output_screenshots/full_output.png)
 
 Conversely, as mentionned in the Introduction, this code works for the identification of "odd" number of roots and if "even" number of roots are present, then this code is designed to give a error message stating that there are even number of roots for the entered interval. \
-Inaddition to that, if there are no roots present in the user entered reqion then the code ouputs an error message stating that there are no roots present in the user entered reqion. \
+Inaddition to that, if there are no roots present in the user entered region then the code ouputs an error message stating that there are no roots present in the user entered reqion. \
 A sample screenshot of the outputted error message is shown below.
 
 ![](output_screenshots/output_no_roots.png)
